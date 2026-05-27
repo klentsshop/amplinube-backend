@@ -1,0 +1,24 @@
+{"_type": "plato", "nombre": "Bandeja de asados (Res, Cerdo o Pollo)", "precio": 16000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_asados"}}
+{"_type": "plato", "nombre": "Almuerzo especial", "precio": 25000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_asados"}}
+{"_type": "plato", "nombre": "Bandeja sin sopa", "precio": 16000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_asados"}}
+{"_type": "plato", "nombre": "Chorizo (Cerdo, Ternera o Santarrosano)", "precio": 11000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_picadas"}}
+{"_type": "plato", "nombre": "Rellena 250g con papa, maduro y guacamole", "precio": 12000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_picadas"}}
+{"_type": "plato", "nombre": "Panceta 1/2 libra con acompañamientos", "precio": 30000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_picadas"}}
+{"_type": "plato", "nombre": "Picada media (Panceta, Rellena, Chorizo y acompañamientos)", "precio": 55000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_picadas"}}
+{"_type": "plato", "nombre": "Sancocho", "precio": 8000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_sopas"}}
+{"_type": "plato", "nombre": "Sopa sola", "precio": 6000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_sopas"}}
+{"_type": "plato", "nombre": "Porción de arroz", "precio": 4000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_porciones"}}
+{"_type": "plato", "nombre": "Porción de principio", "precio": 3500, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_porciones"}}
+{"_type": "plato", "nombre": "Porción de ensalada", "precio": 3000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_porciones"}}
+{"_type": "plato", "nombre": "Porción de papas a la francesa", "precio": 4000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_porciones"}}
+{"_type": "plato", "nombre": "Marranitas (Unidad)", "precio": 3500, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_porciones"}}
+{"_type": "plato", "nombre": "Aborrajados (Unidad)", "precio": 3500, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_porciones"}}
+{"_type": "plato", "nombre": "Proteína sola", "precio": 7000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_porciones"}}
+{"_type": "plato", "nombre": "Champús (9 oz)", "precio": 6000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_bebidas"}}
+{"_type": "plato", "nombre": "Agua", "precio": 2500, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_bebidas"}}
+{"_type": "plato", "nombre": "Cerveza Andina", "precio": 4500, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_bebidas"}}
+{"_type": "plato", "nombre": "Postobón 400ml", "precio": 4500, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_bebidas"}}
+{"_type": "plato", "nombre": "Hit Go 500ml", "precio": 4500, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_bebidas"}}
+{"_type": "plato", "nombre": "Postobón 2.5 Litros", "precio": 9500, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_bebidas"}}
+{"_type": "plato", "nombre": "Desayunos calentados", "precio": 14000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_desayunos"}}
+{"_type": "plato", "nombre": "ADICIONAL PARA LLEVAR (Empaque)", "precio": 2000, "disponible": true, "categoria": {"_type": "reference", "_ref": "cat_porciones"}}

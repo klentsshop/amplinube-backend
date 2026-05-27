@@ -1,0 +1,6 @@
+{"_type": "categoria", "_id": "cat_asados", "titulo": "🥩 Asados y Platos Fuertes", "orden": 1, "slug": {"_type": "slug", "current": "asados-platos-fuertes"}}
+{"_type": "categoria", "_id": "cat_picadas", "titulo": "🍢 Picadas y Entradas", "orden": 2, "slug": {"_type": "slug", "current": "picadas-entradas"}}
+{"_type": "categoria", "_id": "cat_sopas", "titulo": "🥣 Sopas y Sancochos", "orden": 3, "slug": {"_type": "slug", "current": "sopas-sancochos"}}
+{"_type": "categoria", "_id": "cat_porciones", "titulo": "🍟 Porciones y Extras", "orden": 4, "slug": {"_type": "slug", "current": "porciones-extras"}}
+{"_type": "categoria", "_id": "cat_bebidas", "titulo": "🥤 Bebidas y Champús", "orden": 5, "slug": {"_type": "slug", "current": "bebidas-champus"}}
+{"_type": "categoria", "_id": "cat_desayunos", "titulo": "🍳 Desayunos", "orden": 6, "slug": {"_type": "slug", "current": "desayunos"}}
