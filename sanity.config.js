@@ -31,8 +31,8 @@ export default defineConfig({
               .child(
                 S.list()
                   .title('Seleccione Cliente')
-                  .items(
-                    negocios.length > 0 
+                  .items([
+                    ...(negocios.length > 0 
                       ? negocios.map((n) =>
                           S.listItem()
                             .title(n.nombre || 'Sin Nombre')
@@ -70,11 +70,15 @@ export default defineConfig({
                             )
                         )
                       : [
+                          // 🛡️ CORRECCIÓN QUIRÚRGICA: Cambiamos S.component() vacío por un S.documentTypeList de ayuda
                           S.listItem()
-                            .title('⚠️ No hay negocios registrados')
-                            .child(S.component().title('Registra un cliente abajo para empezar'))
-                        ]
-                  )
+                            .title('⚠️ Crea un cliente primero')
+                            .child(
+                              S.documentTypeList('negocio')
+                                .title('Registra un cliente abajo en el menú principal')
+                            )
+                        ])
+                  ])
               ),
 
             S.divider(),
@@ -92,7 +96,6 @@ export default defineConfig({
                 S.list()
                   .title('Datos Técnicos')
                   .items([
-                    // Este filtro limpia la lista para que no se repitan los tipos que ya organizamos arriba
                     ...S.documentTypeListItems().filter(item => 
                       !['venta', 'inventario', 'categoria', 'negocio', 'gasto', 'ordenActiva', 'plato', 'mesero', 'seguridad'].includes(item.getId())
                     )
