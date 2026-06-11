@@ -21,7 +21,9 @@ export default {
       name: 'precioCosto',
       title: 'Precio Costo',
       type: 'number',
-      validation: Rule => Rule.required().min(0)
+      // Quitamos .required() para que no sea obligatorio
+      validation: Rule => Rule.min(0),
+      initialValue: 0
     },
     {
       name: 'categoria',
