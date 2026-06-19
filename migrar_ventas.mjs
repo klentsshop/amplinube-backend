@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import fs from 'fs';
 import readline from 'readline';
 
-const supabase = createClient('https://czkakmvkpfgdftkfijnw.supabase.co', 'sb_secret_b5-7fNmu22xgLcLU8sMWkQ_4Q0Kxjit');
+const supabase = createClient('');
 const TENANT = 'longchino';
 const DESTELLO = './data.ndjson';
 

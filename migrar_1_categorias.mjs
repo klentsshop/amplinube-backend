@@ -3,10 +3,10 @@ import fs from 'fs';
 import readline from 'readline';
 
 const client = createClient({
-    projectId: 'sgyd5ub4',
+    projectId: '',
     dataset: 'production',
     apiVersion: '2026-06-10',
-    token: 'skwItJdVTpo5PJjRp4cRH4blzsMxcJelPGyQumcKJEGuJnRbXKtLaauKmfTmJCK7v4Tp87v8sB58NWxi5KeOw6u23fXFFXcuWPdOmoNVShaJp8Nmi4IYgyBIazrYXRfWi1JxTmX4zQB8ZzzFSKrCeLck2R5BWkTUKI4XiSrlzhG9uN1s7HX3',
+    token: '',
     useCdn: false
 });
 
