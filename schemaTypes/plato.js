@@ -42,6 +42,13 @@ export default {
       }
     },
     {
+     name: 'esVentaPorPeso',
+     title: '¿Se vende por Peso (Báscula / KG)?',
+     type: 'boolean',
+     initialValue: false,
+     description: 'Active este switch si el producto requiere registrar KG (Báscula) en lugar de unidades fijas.'
+    },
+    {
       name: 'disponible',
       title: '¿Está Disponible?',
       type: 'boolean',

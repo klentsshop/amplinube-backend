@@ -11,7 +11,7 @@ const client = createClient({
     useCdn: false
 });
 
-const TENANT = 'tiendamyg';
+const TENANT = 'lateliercafejacky';
 const DESTELLO = './data.ndjson';
 
 // Función para limpiar la ruta de la imagen y obtener la ruta física local real

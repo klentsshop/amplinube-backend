@@ -10,7 +10,7 @@ const client = createClient({
     useCdn: false
 });
 
-const TENANT = 'tiendamyg';
+const TENANT = 'lateliercafejacky';
 const DESTELLO = './data.ndjson';
 
 async function migrarInventario() {

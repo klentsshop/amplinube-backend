@@ -18,6 +18,43 @@ export default {
       initialValue: true, // Por defecto, cuando lo crean, entra activo
       description: 'Si se desactiva, perderá el acceso inmediato al sistema visual del POS.'
     },
+    // 🛡️ NUEVO MAPA DE PERMISOS GRANULARES INTEGRADOS:
+    {
+      name: 'verReporte',
+      title: 'Permiso: Ver Reportes (Cierre de Día)',
+      type: 'boolean',
+      initialValue: false,
+    },
+    {
+      name: 'verAdmin',
+      title: 'Permiso: Acceso a Panel Administrativo',
+      type: 'boolean',
+      initialValue: false,
+    },
+    {
+      name: 'puedeCargarGasto',
+      title: 'Permiso: Registrar Gastos de Caja',
+      type: 'boolean',
+      initialValue: false,
+    },
+    {
+      name: 'verVentas',
+      title: 'Permiso: Ver Historial de Ventas',
+      type: 'boolean',
+      initialValue: false,
+    },
+    {
+      name: 'verInventario',
+      title: 'Permiso: Ver Stock / Inventario',
+      type: 'boolean',
+      initialValue: false,
+    },
+    {
+      name: 'puedeCobrar',
+      title: 'Permiso: Procesar Pagos y Cerrar Cuentas',
+      type: 'boolean',
+      initialValue: false,
+    },
     {
             name: 'tenant', // 👈 ESTE ES EL NUEVO JEFE
             title: 'Negocio',
