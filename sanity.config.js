@@ -30,49 +30,59 @@ export default defineConfig({
               .title('📂 Operaciones por Cliente')
               .child(
                 S.list()
-                  .title('Seleccione Cliente')
-                  .items([
-                    ...(negocios.length > 0 
-                      ? negocios.map((n) =>
-                          S.listItem()
-                            .title(n.nombre || 'Sin Nombre')
-                            .child(
-                              S.list()
-                                .title(`Gestión: ${n.nombre}`)
-                                .items([
-                                  S.listItem()
-                                    .title('🛒 Ventas')
-                                    .child(S.documentList().title('Ventas').filter('_type == "venta" && tenant == $id').params({ id: n.id })),
-                                  S.listItem()
-                                    .title('📂 Cliente domicilios')
-                                    .child(S.documentList().title('cliente').filter('_type == "cliente" && tenant == $id').params({ id: n.id })),
-                                    S.listItem()
-                                    .title('📂 Orden Activa')
-                                    .child(S.documentList().title('Órdenes Activas').filter('_type == "ordenActiva" && tenant == $id').params({ id: n.id })),
-                                  S.listItem()
-                                    .title('📂 Gastos')
-                                    .child(S.documentList().title('Gastos').filter('_type == "gasto" && tenant == $id').params({ id: n.id })),
-                                  S.divider(),
-                                  S.listItem()
-                                    .title('👨‍🍳 Productos')
-                                    .child(S.documentList().title('Productos/Platos').filter('_type == "plato" && tenant == $id').params({ id: n.id })),
-                                  S.listItem()
-                                    .title('📂 Categorías')
-                                    .child(S.documentList().title('Categorías').filter('_type == "categoria" && tenant == $id').params({ id: n.id })),
-                                  S.listItem()
-                                    .title('📦 Inventario')
-                                    .child(S.documentList().title('Inventario').filter('_type == "inventario" && tenant == $id').params({ id: n.id })),
-                                  S.divider(),
-                                  S.listItem()
-                                    .title('👥 Meseros')
-                                    .child(S.documentList().title('Meseros').filter('_type == "mesero" && tenant == $id').params({ id: n.id })),
-                                  S.listItem()
-                                    .title('🔐 Pin / Seguridad')
-                                    .child(S.documentList().title('Seguridad').filter('_type == "seguridad" && tenant == $id').params({ id: n.id })),
-                                ])
-                            )
-                        )
-                      : [
+  .title('Seleccione Cliente')
+  .items([
+    ...(negocios.length > 0 
+      ? negocios.map((n) =>
+          S.listItem()
+            .id(n.id || `fallback-${Math.random().toString(36).substr(2, 9)}`) // 🔑 ESTO ARREGLA EL ID REPETIDO
+            .title(n.nombre || 'Sin Nombre (Falta rellenar en el panel)')
+            .child(
+              S.list()
+                .title(`Gestión: ${n.nombre || 'Sin Nombre'}`)
+                .items([
+                  S.listItem()
+                    .id(`ventas-${n.id}`) // Le damos IDs únicos también a los sub-botones
+                    .title('🛒 Ventas')
+                    .child(S.documentList().title('Ventas').filter('_type == "venta" && tenant == $id').params({ id: n.id })),
+                  S.listItem()
+                    .id(`domicilios-${n.id}`)
+                    .title('📂 Cliente domicilios')
+                    .child(S.documentList().title('cliente').filter('_type == "cliente" && tenant == $id').params({ id: n.id })),
+                  S.listItem()
+                    .id(`ordenes-${n.id}`)
+                    .title('📂 Orden Activa')
+                    .child(S.documentList().title('Órdenes Activas').filter('_type == "ordenActiva" && tenant == $id').params({ id: n.id })),
+                  S.listItem()
+                    .id(`gastos-${n.id}`)
+                    .title('📂 Gastos')
+                    .child(S.documentList().title('Gastos').filter('_type == "gasto" && tenant == $id').params({ id: n.id })),
+                  S.divider(),
+                  S.listItem()
+                    .id(`productos-${n.id}`)
+                    .title('👨‍🍳 Productos')
+                    .child(S.documentList().title('Productos/Platos').filter('_type == "plato" && tenant == $id').params({ id: n.id })),
+                  S.listItem()
+                    .id(`categorias-${n.id}`)
+                    .title('📂 Categorías')
+                    .child(S.documentList().title('Categorías').filter('_type == "categoria" && tenant == $id').params({ id: n.id })),
+                  S.listItem()
+                    .id(`inventario-${n.id}`)
+                    .title('📦 Inventario')
+                    .child(S.documentList().title('Inventario').filter('_type == "inventario" && tenant == $id').params({ id: n.id })),
+                  S.divider(),
+                  S.listItem()
+                    .id(`meseros-${n.id}`)
+                    .title('👥 Meseros')
+                    .child(S.documentList().title('Meseros').filter('_type == "mesero" && tenant == $id').params({ id: n.id })),
+                  S.listItem()
+                    .id(`seguridad-${n.id}`)
+                    .title('🔐 Pin / Seguridad')
+                    .child(S.documentList().title('Seguridad').filter('_type == "seguridad" && tenant == $id').params({ id: n.id })),
+                ])
+            )
+        )
+      : [
                           // 🛡️ CORRECCIÓN QUIRÚRGICA: Cambiamos S.component() vacío por un S.documentTypeList de ayuda
                           S.listItem()
                             .title('⚠️ Crea un cliente primero')
